@@ -13,13 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('_federal_taxes', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100);
-            $table->string('email', 100)->unique();
-            $table->string('password');
+            $table->string('name');
+            $table->double('percentaje');
+            $table->string('description');
             $table->timestamps();
-            $table->rememberToken();
         });
     }
 
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('_federal_taxes');
     }
 };
