@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('settlement_info', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
+            $table->string('name', 100);
+            $table->string('description', 200);
             $table->timestamps();
         });
     }
