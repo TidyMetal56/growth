@@ -11,6 +11,5 @@ class Settlement_Info extends Model
 
     protected $table = 'settlement_info';
     protected $primarykey = 'id';
-    protected $fillable_N = ['name'];
-    protected $fillable_D = ['description'];
+    protected $fillable_Sett = ['name', 'description'];
 }
