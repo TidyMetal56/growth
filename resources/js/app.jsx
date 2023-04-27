@@ -7,4 +7,7 @@ ReactDOM.createRoot(document.getElementById('example').render(
     <Home/>
 ))
 
+if(document.getElementById("app")) {
+    ReactDOM.render(<App/>, document.getElementById("app"));
+}
 
