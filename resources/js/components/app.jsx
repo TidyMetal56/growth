@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import '../bootstrap';
-import './Example';
 import ReactDOM  from 'react-dom';
 import Home from './Home';
 
