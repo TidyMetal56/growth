@@ -1,8 +1,8 @@
 import {Container, Nav, Navbar, Alert, Image, Button, Form, Card} from 'react-bootstrap';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function Home() {
   const [showAlert, setShowAlert] = useState(false);
