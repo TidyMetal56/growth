@@ -1,41 +1,69 @@
-import {Container, Nav, Navbar, Col, Image, Button, Form} from 'react-bootstrap';
+import {Container, Nav, Navbar, Alert, Image, Button, Form, Card} from 'react-bootstrap';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Login from './Login';
+import Register from './Register';
 
 function Home() {
+  const [showAlert, setShowAlert] = useState(false);
+
+  const handleClick = () => {
+    setShowAlert(true);
+  }
+
   return (
     <>
     <Navbar bg="dark" variant="dark">
-    <Container>
-      <Navbar.Brand href="#home">Growth</Navbar.Brand>
+        <Container>
+        <Navbar.Brand href="#home">Growth</Navbar.Brand>
       <Nav className="me-auto">
-        <Nav.Link href="#home">Information</Nav.Link>
-        <Nav.Link href="#features">calculators</Nav.Link>
-        <Col xs={6} md={4}>
-          <Image src="holder.js/171x180" rounded />
-        </Col>
+        <Nav.Link onClick={handleClick}>Information</Nav.Link>
+        <Nav.Link onClick={handleClick}>Calculators</Nav.Link>
       </Nav>
-    </Container>
-    
-    </Navbar>
-    <Form>
-    <Form.Group className="mb-3" controlId="formBasicEmail">
-      <Form.Label>Email address</Form.Label>
-      <Form.Control type="email" placeholder="Enter email" />
-      <Form.Text className="text-muted">
-        We'll never share your email with anyone else.
-      </Form.Text>
-    </Form.Group>
+            <Alert show={showAlert} variant="info" onClose={() => setShowAlert(false)} dismissible>
+              Please Loggin to enable this options!
+            </Alert>
+        </Container>
+      </Navbar>
 
-    <Form.Group className="mb-3" controlId="formBasicPassword">
-      <Form.Label>Password</Form.Label>
-      <Form.Control type="password" placeholder="Password" />
-    </Form.Group>
-    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-      <Form.Check type="checkbox" label="Check me out" />
-    </Form.Group>
-    <Button variant="primary" type="submit">
-      Submit
-    </Button>
-  </Form>
+      <Container className="d-flex justify-content-center align-items-center mt-5">
+        <Card style={{ width: '18rem' }}>
+          <Card.Body>
+            <Card.Title className="text-center">Welcome</Card.Title>
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>welcome to Growth a page where you can get important information for adult life because remember knowledge is power</Form.Label>
+              </Form.Group>
+              <div className="d-flex flex-column justify-content-center">
+                 <Link to="/Login" className="nav-link">Login</Link>
+                 <br/>
+                 <Link to="/Register" className="nav-link">Register</Link>
+              </div>
+            </Form>
+          </Card.Body>
+        </Card>
+      </Container>
+
+      <Container className="d-flex justify-content-center align-items-center mt-5">
+        <Card style={{ width: '18rem' }}>
+          <Card.Body>
+            <Card.Title className="text-center">What are you found here?</Card.Title>
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label></Form.Label>
+              </Form.Group>
+            </Form>
+            <Card.Title className="text-center">How this information could be useful to me?</Card.Title>
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label></Form.Label>
+              </Form.Group>
+            </Form>
+          </Card.Body>
+        </Card>
+      </Container>
+      <br/>
+  
   </>
     
   );
