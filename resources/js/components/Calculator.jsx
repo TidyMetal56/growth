@@ -17,8 +17,12 @@ function Cal() {
     </Container>
     </Navbar>
 
-    <Form>
-      <Form.Group className="mb-3" controlId="SelectTaxe">
+    <Container className="d-flex justify-content-center align-items-center mt-5">
+    <Card style={{ width: '18rem' }}>
+      <Card.Body>
+        <Card.Title className="text-center">Calculate</Card.Title>
+        <Form>
+        <Form.Group className="mb-3" controlId="CalculateTaxe">
         <Form.Label>Select a Taxe</Form.Label>
         <Form.Select placeholder="Select a Taxe">
           <option>Select a Taxe</option>
@@ -35,7 +39,10 @@ function Cal() {
       <Button variant="primary" type="submit">
         Submit
       </Button>
-    </Form>
+        </Form>
+      </Card.Body>
+    </Card>
+  </Container>
     </>
     );
 };
