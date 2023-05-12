@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { Button, Form, Card, Container } from 'react-bootstrap'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 

@@ -1,4 +1,4 @@
-import {Navbar, Nav, Container, Form} from 'react-bootstrap';
+import {Navbar, Nav, Container, Form, Col, Image, Card, Button} from 'react-bootstrap';
 
 
 function Cal() {
@@ -36,9 +36,11 @@ function Cal() {
         <Form.Label>Submit the amount</Form.Label>
         <Form.Control type="number" placeholder="Submit" />
       </Form.Group>
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
+        <div className="d-flex justify-content-center">
+          <Button className="" variant="primary" type="submit">
+            Submit
+          </Button>
+        </div>
         </Form>
       </Card.Body>
     </Card>
@@ -47,4 +49,4 @@ function Cal() {
     );
 };
 
-export default Cal();
+export default Cal;

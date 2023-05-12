@@ -1,4 +1,4 @@
-import {Navbar, Nav, Container, Form} from 'react-bootstrap';
+import {Navbar, Nav, Container, Form, Col, Image} from 'react-bootstrap';
 
 
 function Info() {
