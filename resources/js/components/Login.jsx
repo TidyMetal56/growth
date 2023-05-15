@@ -57,7 +57,11 @@ function Login() {
           <Card.Title className="text-center">Login</Card.Title>
             <Form>
               
-              <Image src="./image/LogoGrow" placeholder="Logo"/>
+              <Image 
+                src='../image/LogoGrow.png' 
+                alt='Logotipo'
+                className="max-w-xs"
+              />
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
