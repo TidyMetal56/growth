@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import { Button, Form, Card, Container } from 'react-bootstrap'
+import { Button, Form, Card, Container, Alert, Navbar, Nav, Image} from 'react-bootstrap'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Bar from '../Components/Nvar';
 
 function Register() {
-  
   const {formValue, setformValue} = useState({
     email: '',
     password: ''
@@ -30,6 +30,9 @@ function Register() {
   }
   
   return (
+    <>
+    <Bar/>
+
     <Container className="d-flex justify-content-center align-items-center mt-5">
         <Card style={{ width: '18rem' }}>
           <Card.Body>
@@ -68,6 +71,7 @@ function Register() {
           </Card.Body>
         </Card>
       </Container>
+    </>
   );
 }
 

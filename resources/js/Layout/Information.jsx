@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Form, Navbar, Col, Container, Image, Nav} from 'react-bootstrap';
+import Bar from '../components/Nvar';
 
 function Info() {
   const [selectedOption, setSelectedOption] = useState('');
@@ -10,18 +11,8 @@ function Info() {
 //Hay que cambiar la informacion del card body para mostrar la info de la base de datos
   return (
     <div>
-    <Navbar bg="dark" variant="dark">
-    <Container>
-      <Navbar.Brand href="#home">Growth</Navbar.Brand>
-      <Nav className="me-auto">
-        <Nav.Link href="#home">Information</Nav.Link>
-        <Nav.Link href="#features">calculators</Nav.Link>
-        <Col xs={6} md={4}>
-          <Image src="holder.js/171x180" rounded />
-        </Col>
-      </Nav>
-    </Container>
-    </Navbar>
+    
+    <Bar/>
 
     <Container className="d-flex flex-column justify-content-center align-items-center mt-5">
       <Card style={{ width: '18rem' }}>

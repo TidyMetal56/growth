@@ -3,13 +3,9 @@ import { Card, Container, Form, Button, Nav, Navbar, Alert} from 'react-bootstra
 import Image from 'react-bootstrap/Image'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Bar from '../Components/Nvar'
 
 function Login() {
-  const [showAlert, setShowAlert] = useState(false);
-
-  const handleClick = () => {
-    setShowAlert(true);
-  }
 
   const {formValue, setformValue} = useState({
     email: '',
@@ -37,18 +33,7 @@ function Login() {
   
   return (
     <>
-    <Navbar bg="dark" variant="dark">
-        <Container>
-        <Navbar.Brand href="#home">Growth</Navbar.Brand>
-      <Nav className="me-auto">
-        <Nav.Link onClick={handleClick}>Information</Nav.Link>
-        <Nav.Link onClick={handleClick}>Calculators</Nav.Link>
-      </Nav>
-          <Alert show={showAlert} variant="info" onClose={() => setShowAlert(false)} dismissible>
-            Please Loggin to enable this options!
-          </Alert>
-        </Container>
-    </Navbar>
+     <Bar/>
 
 
     <Container className="d-flex justify-content-center align-items-center mt-5">
@@ -56,12 +41,7 @@ function Login() {
         <Card.Body>
           <Card.Title className="text-center">Login</Card.Title>
             <Form>
-              
-              <Image 
-                src='../image/LogoGrow.png' 
-                alt='Logotipo'
-                className="max-w-xs"
-              />
+        
 
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
