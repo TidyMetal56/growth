@@ -12,7 +12,7 @@ function Home() {
     <Container className="mt-5">
       <Row className="justify-content-between">
         <Col sm={6} md={6} lg={5}>
-          <Card className="mb-3">
+          <Card className="mb-3 shadow">
             <Card.Body>
             <Card.Title className="text-center">What can you find here?</Card.Title>
               <Form>
@@ -27,6 +27,10 @@ function Home() {
                   <Link to="/Register" className="nav-link text-center">
                     Register
                   </Link>
+                  <br/>
+                  <Link to="/Law" className="nav-link text-center">
+                    LaborLaw
+                  </Link>
                 </div>
               </Form>
             </Card.Body>
@@ -34,7 +38,7 @@ function Home() {
         </Col>
 
         <Col sm={6} md={8} lg={5}>
-          <Card className="mb-3">
+          <Card className="mb-3 shadow">
             <Card.Body>
               <Card.Title className="text-center">How can this information be useful to you?</Card.Title>
               <Form>

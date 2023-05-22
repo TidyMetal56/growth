@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Navbar, Container, Image, Alert, Nav  } from "react-bootstrap";  
 import { useState } from 'react';
 
+
 function Bar() {
 
     const [showAlert, setShowAlert] = useState(false);
@@ -11,9 +12,9 @@ function Bar() {
     }
 
     return ( 
-        <Navbar bg="primary" variant="dark">
+    <Navbar bg="primary" variant="dark">
       <Container>
-        <Image alt='Image Logo' src='../public/image/LogoGrow.png' width={100} height={50}/>
+        <Image alt='Image Logo' src={'../public/image/LogoGrow.png'} width={100} height={50}/>
             <Nav className="me-auto">
                 <Nav.Link onClick={handleClick}>Information</Nav.Link>
                 <Nav.Link onClick={handleClick}>Calculators</Nav.Link>
@@ -22,6 +23,9 @@ function Bar() {
                 Please Loggin to enable this options!
             </Alert>
             </Container>
+            <Navbar.Collapse classname="justify-content-end margin-right">
+                <Image alt='Profile' className="" roundedCircle src={'../public/image/Profile.jpg'} width={50} height={50}/>
+            </Navbar.Collapse>
     </Navbar>
     )
 }

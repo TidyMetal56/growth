@@ -5,6 +5,7 @@ import Home from './Home';
 import Register from './Register';
 import Error from './Error';
 import Information from './Information';
+import Law from './LaborLaw';
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     {
         path: '/Information',
         element: <Information/>
+    },
+    {
+        path: '/Law',
+        element: <Law/>
     },
     {
         path: '*',
