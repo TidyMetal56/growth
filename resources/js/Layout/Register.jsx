@@ -3,6 +3,7 @@ import { Button, Form, Card, Container, Alert, Navbar, Nav, Image} from 'react-b
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Bar from '../Components/Nvar';
+import Footer from '../Components/Footer';
 
 function Register() {
   const {formValue, setformValue} = useState({
@@ -33,7 +34,7 @@ function Register() {
     <>
     <Bar/>
 
-    <Container className="d-flex justify-content-center align-items-center mt-5">
+    <Container className="d-flex justify-content-center align-items-center mt-5 margin" style={{ marginBottom: '150px' }}>
         <Card style={{ width: '18rem' }}>
           <Card.Body>
             <Card.Title className="text-center">Register</Card.Title>
@@ -71,6 +72,9 @@ function Register() {
           </Card.Body>
         </Card>
       </Container>
+
+      <br/>
+      <Footer/>
     </>
   );
 }

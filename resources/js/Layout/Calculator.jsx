@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Form, Card, Button, Navbar, Col, Container, Image, Nav} from 'react-bootstrap';
 import Bar from '../Components/Nvar'
+import Footer from '../Components/Footer';
 
 function Cal() {
   const [selectedOption, setSelectedOption] = useState('');
@@ -99,6 +100,8 @@ function Cal() {
       <br/>
       {showResult && resultCard}
     </Container>
+
+    <Footer/>
     </>
   );
 }

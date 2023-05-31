@@ -1,0 +1,10 @@
+export const cards = [
+    { title: 'Articulo 101', description: 'El salario en efectivo deberá pagarse precisamente en moneda de curso legal, no siendo permitido hacerlo en mercancías, vales, fichas o cualquier otro signo representativo con que se pretenda substituir la moneda.'},
+    { title: 'Articulo 90', description: 'Salario mínimo es la cantidad menor que debe recibir en efectivo la persona trabajadora por los servicios prestados en una jornada de trabajo.'},
+    { title: 'Articulo 97', description: 'Los salarios mínimos no podrán ser objeto de compensación, descuento o reducción' },
+    { title: 'Articulo 87', description: 'Los trabajadores tendrán derecho a un aguinaldo anual que deberá pagarse antes del día veinte de diciembre, equivalente a quince días de salario, por lo menos.' },
+    { title: 'Articulo 29', description: 'Queda prohibida la utilización de menores de dieciocho años para la prestación de servicios fuera de la República, salvo que se trate de técnicos, profesionales, artistas, deportistas y, en general, de trabajadores especializados.'},
+    { title: 'Articulo 60', description: 'Jornada diurna es la comprendida entre las seis y las veinte horas Jornada nocturna es la comprendida entre las veinte y las seis horas. Jornada mixta es la que comprende períodos de tiempo de las jornadas diurna y nocturna, siempre que el período nocturno sea menor de tres horas y media, pues si comprende tres y media o más, se reputará jornada nocturna' },
+    { title: 'Articulo 61', description: 'La duración máxima de la jornada será: ocho horas la diurna, siete la nocturna y siete horas y media la mixta.' },
+    { title: 'Articulo 69', description: 'Por cada seis días de trabajo disfrutará el trabajador de un día de descanso, por lo menos, con goce de salario íntegro.' },
+  ];

@@ -3,6 +3,7 @@ import Login from './Login';
 import Register from './Register';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Bar from '../Components/Nvar';
+import Footer from '../Components/Footer';
 
 function Home() {
   return (
@@ -59,6 +60,8 @@ function Home() {
         </Col>
       </Row>
     </Container>
+
+    <Footer/>
   
   </>
     

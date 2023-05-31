@@ -4,6 +4,7 @@ import Image from 'react-bootstrap/Image'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Bar from '../Components/Nvar'
+import Footer from '../Components/Footer'
 
 function Login() {
 
@@ -66,6 +67,8 @@ function Login() {
           </Card.Body>
       </Card>
     </Container>
+
+    <Footer/>
 
   </>
   );

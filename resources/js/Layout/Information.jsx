@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Form, Navbar, Col, Container, Image, Nav} from 'react-bootstrap';
-import Bar from '../components/Nvar';
+import Bar from '../Components/Nvar';
+import Footer from '../Components/Footer';
 
 function Info() {
   const [selectedOption, setSelectedOption] = useState('');
@@ -51,6 +52,8 @@ function Info() {
       </Card>
       )}
       </Container>
+
+      <Footer/>
     </div>
   );
 }
