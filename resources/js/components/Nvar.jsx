@@ -14,7 +14,7 @@ function Bar() {
     return ( 
     <Navbar bg="primary" variant="dark">
       <Container>
-        <Image alt='Image Logo' src={'../public/image/LogoGrow.png'} width={100} height={50}/>
+        <Image alt='Image Logo' src={'https://i.ibb.co/zhwGwt2/LogoGrow.png'} width={100} height={50}/>
             <Nav className="me-auto">
                 <Nav.Link onClick={handleClick}>Information</Nav.Link>
                 <Nav.Link onClick={handleClick}>Calculators</Nav.Link>
@@ -24,7 +24,7 @@ function Bar() {
             </Alert>
             </Container>
             <Navbar.Collapse classname="justify-content-end margin-right">
-                <Image alt='Profile' className="" roundedCircle src={'../public/image/Profile.jpg'} width={50} height={50}/>
+                <Image alt='Profile' className="" roundedCircle src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYdGHZXixfzYRXYF_mYdK_M4bTZvG97wH7Ug&usqp=CAU'} width={50} height={50}/>
             </Navbar.Collapse>
     </Navbar>
     )

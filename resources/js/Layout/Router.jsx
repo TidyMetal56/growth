@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         element: <Calculator/>
     },
     {
-        path: '/Information',
+        path: '/growth/public/Information',
         element: <Information/>
     },
     {
