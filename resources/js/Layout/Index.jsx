@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Bar from '../Components/Nvar';
 import Footer from '../Components/Footer';
 
-function Home() {
+function Index() {
   return (
     <>
     <Bar/>
@@ -15,7 +15,7 @@ function Home() {
         <Col sm={6} md={6} lg={5}>
           <Card className="mb-3 shadow">
             <Card.Body>
-            <Card.Title className="text-center">What can you find here?</Card.Title>
+            <Card.Title className="text-center">Begin</Card.Title>
               <Form>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label></Form.Label>
@@ -41,7 +41,7 @@ function Home() {
         <Col sm={6} md={8} lg={5}>
           <Card className="mb-3 shadow">
             <Card.Body>
-              <Card.Title className="text-center">How can this information be useful to you?</Card.Title>
+              <Card.Title className="text-center">Froma</Card.Title>
               <Form>
                 <Form.Group controlId="formBasicEmail">
                   <div className="d-flex flex-column justify-content-center">
@@ -68,4 +68,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Index;

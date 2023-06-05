@@ -6,6 +6,7 @@ import Register from './Register';
 import Error from './Error';
 import Information from './Information';
 import Law from './LaborLaw';
+import Index from './Index';
 
 const router = createBrowserRouter([
     {
@@ -33,9 +34,14 @@ const router = createBrowserRouter([
         element: <Law/>
     },
     {
+        path: '/growth/public/Index',
+        element: <Index/>
+    },
+    {
         path: '*',
         element: <Error />
     }
+
 ])
 
 export default router;
