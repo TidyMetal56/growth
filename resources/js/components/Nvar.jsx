@@ -2,7 +2,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Navbar, Container, Image, Alert, Nav  } from "react-bootstrap";  
 import { useState } from 'react';
 
-
+/*
+<Nav.Link onClick={handleClick}>Information</Nav.Link>
+                <Nav.Link onClick={handleClick}>Calculators</Nav.Link>
+*/
 function Bar() {
 
     const [showAlert, setShowAlert] = useState(false);
@@ -16,8 +19,7 @@ function Bar() {
       <Container>
         <Image alt='Image Logo' src={'https://i.ibb.co/zhwGwt2/LogoGrow.png'} width={100} height={50}/>
             <Nav className="me-auto">
-                <Nav.Link onClick={handleClick}>Information</Nav.Link>
-                <Nav.Link onClick={handleClick}>Calculators</Nav.Link>
+                
             </Nav>
             <Alert show={showAlert} variant="info" onClose={() => setShowAlert(false)} dismissible>
                 Please Loggin to enable this options!

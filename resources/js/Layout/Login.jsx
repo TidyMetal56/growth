@@ -60,8 +60,12 @@ function Login() {
               
               <div className="d-flex justify-content-center">
                 <Button variant="primary" type="submit">Submit</Button>
+                
               </div>
-         
+
+              <Link to="/Register" className="nav-link text-center">
+                   You do not have an account? Sign up
+                </Link>
               
             </Form>
           </Card.Body>

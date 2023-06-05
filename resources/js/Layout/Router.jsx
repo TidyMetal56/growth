@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         element: <Calculator/>
     },
     {
-        path: '/growth/public/Information',
+        path: '/Information',
         element: <Information/>
     },
     {
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         element: <Law/>
     },
     {
-        path: '/growth/public/Index',
+        path: '/Index',
         element: <Index/>
     },
     {

@@ -16,22 +16,18 @@ function Home() {
           <Card className="mb-3 shadow">
             <Card.Body>
             <Card.Title className="text-center">What can you find here?</Card.Title>
+            <Card.Text>On this page you will find important information about taxes, labor laws and other tools that will help you in adulthood.</Card.Text>
+            <Card.Text>what do you need to start?</Card.Text>
               <Form>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label></Form.Label>
                 </Form.Group>
                 <div className="d-flex flex-column justify-content-center">
+                  
                   <Link to="/Login" className="nav-link text-center">
                     Login
                   </Link>
                   <br />
-                  <Link to="/Register" className="nav-link text-center">
-                    Register
-                  </Link>
-                  <br/>
-                  <Link to="/Law" className="nav-link text-center">
-                    LaborLaw
-                  </Link>
                 </div>
               </Form>
             </Card.Body>
@@ -42,18 +38,23 @@ function Home() {
           <Card className="mb-3 shadow">
             <Card.Body>
               <Card.Title className="text-center">How can this information be useful to you?</Card.Title>
+              <Card.Text>When we grow up, many of the topics that we did not know become too important as we get older, the problem is that no one gives you much of the information and you have to search for it on your own. Here you will find the vital information that will help you so that life does not catch you off guard</Card.Text>
+              <Card.Text>what do you need to start?</Card.Text>
               <Form>
-                <Form.Group controlId="formBasicEmail">
-                  <div className="d-flex flex-column justify-content-center">
-                    <Link to="/Calculator" className="nav-link text-center">
-                      Calculator
-                    </Link>
-                    <br />
-                    <Link to="/growth/public/Information" className="nav-link text-center">
-                      Information
-                    </Link>
-                  </div>
+              <Form.Group controlId="formBasicEmail">
+                  <Form.Label></Form.Label>
                 </Form.Group>
+                <div className="d-flex flex-column justify-content-center">
+                  
+                  <Link to="/Login" className="nav-link text-center">
+                    Login
+                  </Link>
+
+                  <Link to="/Index" className="nav-link text-center">
+                    Index
+                  </Link>
+                  <br />
+                </div>
               </Form>
             </Card.Body>
           </Card>
