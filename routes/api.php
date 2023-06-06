@@ -19,8 +19,8 @@ use App\Http\Controllers\ResponseController;
 Route::middleware('auth:api')->group(function(){
 
 });
-Route::post('register', [PassportAuthController::class, 'register']);
-Route::post('login', [PassportAuthController::class, 'login']);
+Route::post('/register', [PassportAuthController::class, '/register']);
+Route::post('/login', [PassportAuthController::class, '/login']);
 //Route::get('/token',[])
 
 
