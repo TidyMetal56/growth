@@ -32,7 +32,6 @@ function Register() {
     formData.append("name", formValue.name);
     formData.append("lastname", formValue.lastname);
     formData.append("email", formValue.email);
-    formData.append("address", formValue.address);
     formData.append("password", formValue.password)
     //console.log(formData.get("lastname"))
 
@@ -110,16 +109,7 @@ function Register() {
                   value={formValue.email}
                   onChange={onChange} />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label>Dirección</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Dirección"
-                  name="address"
-                  value={formValue.address}
-                  onChange={onChange}
-                />
-              </Form.Group>
+          
               <Form.Group className="mb-3" controlId="RegisterPass">
                 <Form.Label>Password</Form.Label>
                 <Form.Control
