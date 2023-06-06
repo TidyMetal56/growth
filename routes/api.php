@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PassportAuthController;
+use App\Http\Controllers\ResponseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->group(function(){
+
 });
+Route::post('register', [PassportAuthController::class, 'register']);
+Route::post('login', [PassportAuthController::class, 'login']);
+//Route::get('/token',[])
+
+
+Route::post('/usuarios_email', [PassportAuthController::class, 'index']);
+Route::post('/user_update', [PassportAuthController::class, 'update']);
+Route::post('/user_delete', [PassportAuthController::class, 'destroy']);

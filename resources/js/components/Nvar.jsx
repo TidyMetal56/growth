@@ -19,7 +19,8 @@ function Bar() {
       <Container>
         <Image alt='Image Logo' src={'https://i.ibb.co/zhwGwt2/LogoGrow.png'} width={100} height={50}/>
             <Nav className="me-auto">
-                
+                <Nav.Link onClick={handleClick}>Information</Nav.Link>
+                <Nav.Link onClick={handleClick}>Calculators</Nav.Link>
             </Nav>
             <Alert show={showAlert} variant="info" onClose={() => setShowAlert(false)} dismissible>
                 Please Loggin to enable this options!

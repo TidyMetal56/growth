@@ -1,80 +1,89 @@
-import React, {useState} from 'react'
-import { Card, Container, Form, Button, Nav, Navbar, Alert} from 'react-bootstrap'
-import Image from 'react-bootstrap/Image'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
-import Bar from '../Components/Nvar'
-import Footer from '../Components/Footer'
+import React, { useState } from "react";
+import { Card, Container, Form, Button } from 'react-bootstrap';
+import Axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
+  let navigate = useNavigate();
+  const [formValue, setFormValue] = useState({
+    email: "",
+    password: "",
+  });
 
-  const {formValue, setformValue} = useState({
-    email: '',
-    password: ''
-  })
-  
   const onChange = (e) => {
     e.persist();
-    setformValue({...formValue, [e.target.name]: e.target.value});
-  }
+    setFormValue(prevState => ({ ...prevState, [e.target.name]: e.target.value }));
+  };
 
-  const handleSubmit = (e) => {
-    if (e && e.preventDefault()) e.preventDefault();
-    const formData = new FormData();
-    formData.append("email", formValue.email)
-    formData.append("password", formValue.password)
-    axios.post("", formData,
-    {headers: {'Content-Type': 'multipart/form-data',
-  'Accept': 'application/json'}}
-  ).then(Response => {
-    console.log('response');
-    console.log(response);
-  })
-  }
-  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await Axios.post(
+        
+        "http://localhost:8080/growth/public/api/login",
+        {
+          email: formValue.email,
+          password: formValue.password,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          }
+        }
+      );
+
+      // Verificar la estructura de la respuesta antes de almacenar el token
+      if (response.data && response.data.data && response.data.data.token) {
+        const { token } = response.data.data;
+        localStorage.setItem('token', token);
+        localStorage.setItem('correo', formValue.email);
+        navigate("/growth/public/");
+      } else {
+        console.log('Error: Respuesta de API inválida');
+      }
+    } catch (error) {
+      console.log('Error:', error.message);
+    }
+  };
+
   return (
     <>
-     <Bar/>
-
-
-    <Container className="d-flex justify-content-center align-items-center mt-5">
-      <Card style={{ width: '18rem' }}>
-        <Card.Body>
-          <Card.Title className="text-center">Login</Card.Title>
-            <Form>
-        
-
+      <Container className="d-flex justify-content-center align-items-center mt-5">
+        <Card style={{ width: '18rem' }}>
+          <Card.Body>
+            <Card.Title className="text-center">Login</Card.Title>
+            <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Control
+                  type="email"
+                  placeholder="Enter email"
+                  name="email"
+                  value={formValue.email}
+                  onChange={onChange}
+                />
               </Form.Group>
-              
+
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  value={formValue.password}
+                  onChange={onChange}
+                />
               </Form.Group>
-              
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group>
-              
+
               <div className="d-flex justify-content-center">
                 <Button variant="primary" type="submit">Submit</Button>
-                
               </div>
-
-              <Link to="/Register" className="nav-link text-center">
-                   You do not have an account? Sign up
-                </Link>
-              
             </Form>
           </Card.Body>
-      </Card>
-    </Container>
-
-    <Footer/>
-
-  </>
+        </Card>
+      </Container>
+    </>
   );
 }
 
