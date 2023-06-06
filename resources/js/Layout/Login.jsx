@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Card, Container, Form, Button } from 'react-bootstrap';
 import Axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import Bar from "../Components/Nvar";
 
 function Login() {
   let navigate = useNavigate();
@@ -49,6 +50,9 @@ function Login() {
 
   return (
     <>
+
+      <Bar/>
+
       <Container className="d-flex justify-content-center align-items-center mt-5">
         <Card style={{ width: '18rem' }}>
           <Card.Body>
@@ -79,6 +83,10 @@ function Login() {
               <div className="d-flex justify-content-center">
                 <Button variant="primary" type="submit">Submit</Button>
               </div>
+
+              <Link to="/Register" className="nav-link text-center">
+                  Do not you have an account yet? Sign up
+              </Link>
             </Form>
           </Card.Body>
         </Card>
